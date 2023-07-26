@@ -68,7 +68,7 @@ h3{
     height: 50px;
 }
 @media screen and (max-width: 480px) {
-    .Showcase_container{
+    .project{
         width: 100%;
     }
 }
