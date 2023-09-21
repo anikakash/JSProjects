@@ -18,12 +18,12 @@ btn.addEventListener("click", function (e) {
 
     // create new author
     const newAuthor = document.createElement("div");
-    newAuthor.innerHTML = title.value;
+    newAuthor.innerHTML = author.value;
     newRow.appendChild(newAuthor);
 
     // create new year
     const newYear = document.createElement("div");
-    newYear.innerHTML = title.value;
+    newYear.innerHTML = year.value;
     newRow.appendChild(newYear);
 
     bookList.appendChild(newRow);
