@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Happy Programming Button</title>
+    </head>
+    <body>
+        <button id="printButton">Click me</button>
+        <p id="text"></p>
+
+        <script>
+            let val = document.getElementById('text');
+            document.getElementById('printButton').addEventListener('click', function(){
+                val.innerHTML = "Happy Programming"
+                // alert("Hello")
+            })
+        </script>
+    </body>
+</html>

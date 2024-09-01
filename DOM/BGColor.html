@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Change Background Color</title>
+    </head>
+    <body>
+        <button id="colorButton">Change Background Color</button>
+
+        <script>
+            document.getElementById('colorButton').addEventListener('click', function(){
+                const randomColor = '#' + Math.floor(Math.random()*999).toString(16);
+                document.body.style.backgroundColor = randomColor;
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disable Button After Click</title>
+</head>
+<body>
+    <button id="disableButton">Click Me Once</button>
+
+    <script>
+        document.getElementById('disableButton').addEventListener('click', function() {
+            this.disabled = true;
+            this.textContent = 'Button Disabled';
+        });
+    </script>
+</body>
+</html>

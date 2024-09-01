@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Toggle Button Text</title>
+    </head>
+    <body>
+        <button id="toggleButton">OFF</button>
+
+        <script>
+            document.getElementById('toggleButton').addEventListener('click', function(){
+                if(this.textContent === "OFF"){
+                    this.textContent = "ON";
+                }else{
+                    this.textContent = "OFF";
+                }
+            })
+        </script>
+    </body>
+</html>
