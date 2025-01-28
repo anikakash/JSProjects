@@ -1,0 +1,180 @@
+@import url('https://fonts.cdnfonts.com/css/lt-galaxy-reverse');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background-color: #d5d5d5;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.details {
+    background-color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 90%;
+    padding: 50px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.img {
+    flex: 1 1 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-info {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-info h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.colors, .size {
+    margin-bottom: 20px;
+}
+
+.colors ul, .size ul {
+    display: flex;
+    gap: 10px;
+}
+
+.colors ul li, .size ul li {
+    list-style: none;
+    height: 35px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #ddd;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.colors ul li:nth-child(1) {
+    background-color: red;
+}
+
+.colors ul li:nth-child(2) {
+    background-color: yellow;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.price img {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
+
+.price .ammount {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #333;
+}
+
+.colors ul li.selected, .size ul li.selected {
+    border: 2px solid #000;
+}
+
+.colors ul li:hover, .size ul li:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .details {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .img, .product-info {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .price .ammount {
+        font-size: 1.2rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .details {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .product-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .colors ul li, .size ul li {
+        height: 30px;
+        width: 40px;
+        font-size: 0.8rem;
+    }
+
+    .price .ammount {
+        font-size: 1rem;
+    }
+
+    .button {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+}
