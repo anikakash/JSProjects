@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #E5C9C5;
+    --secondary-color: #856560;
+    --background-color: white;
+    --text-color: black;
+    --button-background-color: #734640;
+    --button-text-color: white;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body.night-mode {
+    --primary-color: #2E3A47;
+    --secondary-color: #4f647a;
+    --background-color: #121212;
+    --text-color: #E5E5E5;
+    --button-background-color: #455A64;
+    --button-text-color: white;
+}
+
+.container {
+    padding: 0 10px;
+    width: 1000PX;
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color:var(--primary-color);
+    color: var(--text-color);
+    height: 60px;
+    margin-top: 10px;
+ }
+ 
+ .nav_wrapper{
+     display: flex;
+     align-items: center;
+     gap: 10px;
+ }
+ nav ul{
+     display: flex;
+     align-items: center;
+ }
+ .nightMood{
+     margin-right: 10px;
+     font-size: 30px;
+     background-color: transparent;
+     border-radius: 50%;
+     padding: 5px;
+     cursor: pointer;
+ }
+
+ ul li{
+     list-style: none;
+ }
+ 
+ ul li a{
+     text-decoration: none;
+     color: white;
+     margin-inline: 20px;
+     font-size: 18px;
+     margin-right: 11px;
+ }
+ 
+ ul li a:hover{
+     color: lightgreen;
+     border-bottom: 1px solid white;
+ }
+ 
+ ul .btn{
+     padding: 4px 20px;
+     background-color: var(--button-background-color);
+ }
+ 
+ .logo{
+     margin-left: 12px;
+     font-size: 18px;
+     display: flex;
+     align-items: center;
+ }
+
+ .icon{
+    align-items: center;
+    font-size: 30px;
+    margin-right: 12px;
+    display: none;
+    cursor: pointer;
+    width: 30px;
+}
+
+.hideen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alart {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.inputArea{
+    display: flex;
+    gap: 10px;
+}
+
+.inputBox {
+    padding: 15px;
+    outline: none;
+    border: 0.5px solid var(--primary-color);
+    width: 100%;
+}
+
+.addPlayer {
+    padding: 15px;
+    background-color: var(--button-background-color);
+    border: none;
+    font-size: 15px;
+    color: var(--button-text-color);
+    cursor: pointer;
+    min-width: 110px;
+}
+
+.leaderBoard {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 3px 10px;
+    >div {
+        flex: 1 1 calc(24.99% - 10px);
+    }
+}
+
+.card h3,
+p {
+    font-size: 18px;
+    font-weight: normal;
+    padding: 5px;
+    letter-spacing: 2px;
+}
+
+.country,
+.score, .name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.scoreCrud {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.scoreCrud button {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+#loader {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    border-top-color: var(--text-color);
+    animation: roate 1s infinite;
+    margin-top: 10px;
+}
+
+@keyframes roate {
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@media (max-width: 1024px) {
+	h1{
+        text-align: center;
+    }
+    .inputArea{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       width: 100%;
+       text-align: center;
+    }
+    
+    .card {
+        flex-direction: column;
+        padding: 10px 8px;   
+        margin-bottom: 10px;
+        gap: 10px;
+    }   
+    
+    nav ul{
+        display: none;
+    }
+    .icon{
+        display: flex;
+    }
+    .showData{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        position: absolute;
+        top: 70px;
+        background-color:var(--secondary-color);
+        /* width: 100%; */
+        margin: auto;
+        height: 240px;
+        gap: 25px;
+        left: 10px;
+        right: 10px;
+    }
+}

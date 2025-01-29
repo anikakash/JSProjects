@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 Days Of JavaScript Challenge Leaderboard.</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <h1>30DaysOfJS</h1>
+        </div>
+        <div class="nav_wrapper">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Review</a></li>
+            <li><a href="" class="btn">Login</a></li>
+          </ul>
+          <div class="nightMood">
+            <i id="mood" class="fa-solid fa-moon"></i>
+          </div>
+          <div class="icon">
+            <i id="bar" class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="inputArea">
+        <input
+          type="text"
+          id="firstName"
+          class="inputBox"
+          placeholder="First Name"
+        />
+        <input
+          type="text"
+          name="lastName"
+          id="lastName"
+          class="inputBox"
+          placeholder="Last Name"
+        />
+        <input
+          type="text"
+          name="country"
+          id="country"
+          class="inputBox"
+          placeholder="Country"
+        />
+        <input
+          type="number"
+          name="playerScore"
+          id="playerScore"
+          class="inputBox"
+          placeholder="Player Score"
+        />
+        <button type="submit" class="addPlayer">Add Player</button>
+      </div>
+    </div>
+
+    <div class="hideen">
+      <span class="alart"></span>
+      <div id="loader"></div>
+    </div>
+
+    <div class="container">
+      <div class="leaderBoard"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
